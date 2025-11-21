@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios — Imperial Motors</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg shadow-sm nav-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img src="IMG/logo.png" width="40" height="40" class="me-2 rounded-circle" alt="logo">
+            <span class="text-red">Imperial Motors</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">INICIO</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">PRODUCTOS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active text-red" href="precios.html">PRECIOS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">CONTACTO</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-5 text-center">
+    <h2 class="text-red fw-bold">PLANES Y PRECIOS</h2>
+    <p class="text-secondary">Selecciona el plan que mejor se adapte a ti</p>
+</div>
+
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+
+
+        <div class="col-md-4 mb-4">
+            <div class="card-dark text-center p-4">
+                <h3 class="text-red fw-bold">BÁSICO</h3>
+                <p class="text-secondary">Ideal para usuarios que inician</p>
+
+                <h2 class="text-white fw-bold mt-3">$19.99</h2>
+                <p class="text-secondary">/ mensual</p>
+
+                <ul class="text-white text-start mt-3" style="list-style:none;">
+                    <li>✔ Acceso limitado</li>
+                    <li>✔ 10 consultas al mes</li>
+                    <li>✔ Soporte estándar</li>
+                </ul>
+
+                <button class="btn-red mt-3">Elegir plan</button>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mb-4">
+            <div class="card-dark text-center p-4">
+                <h3 class="text-red fw-bold">PREMIUM</h3>
+                <p class="text-secondary">Perfecto para la mayoría de usuarios</p>
+
+                <h2 class="text-white fw-bold mt-3">$49.99</h2>
+                <p class="text-secondary">/ mensual</p>
+
+                <ul class="text-white text-start mt-3" style="list-style:none;">
+                    <li>✔ Acceso ilimitado</li>
+                    <li>✔ 50 consultas al mes</li>
+                    <li>✔ Soporte prioritario</li>
+                </ul>
+
+                <button class="btn-red mt-3">Elegir plan</button>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mb-4">
+            <div class="card-dark text-center p-4">
+                <h3 class="text-red fw-bold">ULTRA</h3>
+                <p class="text-secondary">Máximo rendimiento y beneficios</p>
+
+                <h2 class="text-white fw-bold mt-3">$89.99</h2>
+                <p class="text-secondary">/ mensual</p>
+
+                <ul class="text-white text-start mt-3" style="list-style:none;">
+                    <li>✔ Acceso total</li>
+                    <li>✔ Consultas ilimitadas</li>
+                    <li>✔ Soporte premium 24/7</li>
+                </ul>
+
+                <button class="btn-red mt-3">Elegir plan</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-red fw-bold text-center">Comentarios extra.</h2>
+
+    <div class="card-dark p-4 mt-3">
+
+        <div class="d-flex gap-2">
+            <input id="taskInput" type="text" class="form-control bg-dark text-white border-secondary"
+                   placeholder="Escribe una tarea...">
+            <button id="addTaskBtn" class="btn-red">Agregar</button>
+        </div>
+
+        <ul id="taskList" class="mt-4 list-group"></ul>
+    </div>
+</div>
+
+
+
+<footer class="container-fluid bg-dark2 p-5 text-center text-secondary mt-5">
+    © 2025 Creado por SEBAS PTE — Todos los derechos reservados
+</footer>
+
+
+<script src="precios.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
