@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto — Imperial Motors</title>
 
-
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Fuente Premium tipo Amazon (Nunito) -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg shadow-sm nav-dark">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
@@ -29,34 +32,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">INICIO</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="productos.html">PRODUCTOS</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="precios.html">PRECIOS</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active text-red" href="contacto.html">CONTACTO</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="productos.html">PRODUCTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="precios.html">PRECIOS</a></li>
+                <li class="nav-item"><a class="nav-link active text-red" href="contacto.html">CONTACTO</a></li>
 
             </ul>
         </div>
     </div>
 </nav>
 
-
+<!-- TÍTULO -->
 <div class="container mt-5 text-center">
     <h2 class="text-red fw-bold">CONTÁCTANOS</h2>
     <p class="text-secondary">Completa la información y te responderemos pronto</p>
 </div>
 
-
+<!-- FORMULARIO -->
 <div class="container mt-4" style="max-width: 700px;">
     <div class="card-dark p-4">
 
@@ -64,58 +56,51 @@
         <div class="success-box" id="successBox">¡Tu mensaje fue enviado y guardado correctamente!</div>
         <div class="clear-box" id="clearBox">¡El formulario ha sido limpiado!</div>
 
-<form id="contactForm" novalidate>
+        <form id="contactForm" novalidate>
 
+            <label for="nameInput" class="text-white fw-bold mt-3">Nombre completo</label>
+            <input id="nameInput" type="text" class="form-control bg-dark text-white border-secondary" placeholder="Ingresa tu nombre" required>
+            <small class="error-msg" id="nameError">Por favor ingresa un nombre válido.</small>
 
-    <label for="nameInput" class="text-white fw-bold mt-3">Nombre completo</label>
-    <input id="nameInput" type="text" class="form-control bg-dark text-white border-secondary" placeholder="Ingresa tu nombre" required>
-    <small class="error-msg" id="nameError">Por favor ingresa un nombre válido.</small>
+            <label for="emailInput" class="text-white fw-bold mt-3">Correo Electrónico</label>
+            <input id="emailInput" type="email" class="form-control bg-dark text-white border-secondary" placeholder="ejemplo@correo.com" required>
+            <small class="error-msg" id="emailError">Por favor ingresa un correo válido.</small>
 
+            <label for="messageInput" class="text-white fw-bold mt-3">Mensaje</label>
+            <textarea id="messageInput" rows="4" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu mensaje..." required></textarea>
+            <small class="error-msg" id="messageError">Por favor ingresa un mensaje válido.</small>
 
-    <label for="emailInput" class="text-white fw-bold mt-3">Correo Electrónico</label>
-    <input id="emailInput" type="email" class="form-control bg-dark text-white border-secondary" placeholder="ejemplo@correo.com" required>
-    <small class="error-msg" id="emailError">Por favor ingresa un correo electrónico válido.</small>
+            <label for="dateInput" class="text-white fw-bold mt-3">Fecha de nacimiento</label>
+            <input id="dateInput" type="date" class="form-control bg-dark text-white border-secondary" required>
+            <small class="error-msg" id="dateError">Seleccione una fecha válida.</small>
 
+            <label for="genderInput" class="text-white fw-bold mt-3">Género</label>
+            <select id="genderInput" class="form-control bg-dark text-white border-secondary" required>
+                <option value="">Seleccionar</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <small class="error-msg" id="genderError">Seleccione una opción.</small>
 
-    <label for="messageInput" class="text-white fw-bold mt-3">Mensaje</label>
-    <textarea id="messageInput" rows="4" class="form-control bg-dark text-white border-secondary" placeholder="Escribe tu mensaje..." required></textarea>
-    <small class="error-msg" id="messageError">Por favor ingresa un mensaje válido.</small>
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="termsCheck">
+                <label class="terms-label" for="termsCheck">Acepto los términos y condiciones</label>
+            </div>
 
+            <div class="progress-container mt-4">
+                <div id="progressBar" class="progress-bar-custom"></div>
+            </div>
 
-    <label for="dateInput" class="text-white fw-bold mt-3">Fecha de nacimiento</label>
-    <input id="dateInput" type="date" class="form-control bg-dark text-white border-secondary" required>
-    <small class="error-msg" id="dateError">Seleccione una fecha válida.</small>
+            <button type="submit" class="btn-red mt-4 w-100">Enviar mensaje</button>
+            <button type="button" id="clearBtn" class="btn-secondary mt-3 w-100">Limpiar formulario</button>
 
-
-    <label for="genderInput" class="text-white fw-bold mt-3">Género</label>
-    <select id="genderInput" class="form-control bg-dark text-white border-secondary" required>
-        <option value="">Seleccionar</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Femenino">Femenino</option>
-        <option value="Otro">Otro</option>
-    </select>
-    <small class="error-msg" id="genderError">Seleccione una opción.</small>
-
-
-    <div class="form-check mt-3">
-        <input class="form-check-input" type="checkbox" id="termsCheck">
-        <label class="terms-label" for="termsCheck">Acepto los términos y condiciones</label>
-    </div>
-
-
-    <div class="progress-container mt-4">
-        <div id="progressBar" class="progress-bar-custom"></div>
-    </div>
-
-    <button type="submit" class="btn-red mt-4 w-100">Enviar mensaje</button>
-    <button type="button" id="clearBtn" class="btn-secondary mt-3 w-100">Limpiar formulario</button>
-
-</form>
+        </form>
 
     </div>
 </div>
 
-
+<!-- LISTADO DE MENSAJES -->
 <div class="container mt-4" style="max-width: 700px;">
 
     <div class="d-flex gap-2 justify-content-center mb-3">
@@ -131,12 +116,12 @@
     </div>
 </div>
 
-
+<!-- FOOTER -->
 <footer class="container-fluid bg-dark2 p-5 text-center text-secondary mt-5">
     © 2025 Creado por SEBAS PTE — Todos los derechos reservados
 </footer>
 
-
+<!-- Scripts -->
 <script src="contacto.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

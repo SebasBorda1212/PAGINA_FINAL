@@ -1,37 +1,73 @@
+/* ================================
+   FUENTE GLOBAL TIPO AMAZON
+================================ */
 body {
-    background: #0c0c0c;
-    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    background: linear-gradient(-45deg,
+        #0d0d0d,
+        #1a1a1a,
+        #3a0f12,
+        #5b151b
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+
+    color: #fff;
+}
+
+/* Fondo animado */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 
+
+/* ================================
+   NAVBAR + TEXTOS
+================================ */
 .navbar .nav-link {
     color: #e63946 !important;
-    font-weight: bold;
+    font-weight: 700;
     transition: 0.3s ease;
 }
+
 .navbar .nav-link:hover {
     color: #ff4d5a !important;
 }
 
 .bg-dark2 {
-    background: #111;
+    background: #111 !important;
 }
 
 .text-red {
     color: #e63946;
 }
 
+
+
+/* ================================
+   BOTONES
+================================ */
 .btn-red {
     background: #e63946;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-weight: 700;
     transition: 0.3s ease;
 }
+
 .btn-red:hover {
     background: #ff4d5a;
 }
+
 
 
 .btn-secondary {
@@ -39,24 +75,60 @@ body {
     color: white;
     border: none;
     padding: 8px 15px;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: 0.3s;
 }
+
 .btn-secondary:hover {
     background: #666;
 }
 
 
 
+/* ================================
+   CARDS & LOGOS
+================================ */
 .card-dark {
     background: #121212;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid #222;
+    color: #ddd;
+}
+
+.client-logo {
+    width: 110px;
+    height: 55px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.img-brand {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
+    transition: 0.3s ease;
+}
+
+.img-brand:hover {
+    transform: scale(1.05);
 }
 
 
 
+/* ================================
+   MODALES PERSONALIZADOS
+================================ */
 .custom-modal {
     position: fixed;
     top: 0;
@@ -71,6 +143,7 @@ body {
     pointer-events: none;
     transition: opacity .35s ease;
 }
+
 .custom-modal.show {
     opacity: 1;
     pointer-events: auto;
@@ -89,6 +162,7 @@ body {
     pointer-events: none;
     transition: opacity .35s ease;
 }
+
 .overlay.show {
     opacity: 1;
     pointer-events: auto;
@@ -105,6 +179,7 @@ body {
     opacity: 0;
     transition: 0.35s ease;
 }
+
 .custom-modal.show .custom-modal-content {
     transform: scale(1);
     opacity: 1;
@@ -132,123 +207,53 @@ body {
 
 .modal-input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 15px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: #1d1d1d;
     border: 1px solid #333;
     color: white;
+    font-size: 0.95rem;
 }
 
 .modal-send {
     margin-top: 15px;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #e63946;
     color: white;
-    border-radius: 6px;
+    font-size: 1rem;
+    border-radius: 8px;
     border: none;
 }
 
 
 
-.client-logo {
-    width: 110px;
-    height: 55px;
-    object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.85;
-    transition: 0.3s ease;
-}
-.client-logo:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.img-brand {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    transition: 0.3s ease;
-}
-.img-brand:hover {
-    transform: scale(1.05);
-}
-
-
-
-.list-group-item {
-    background: #121212 !important;
-    color: white;
-    border: 1px solid #2a2a2a;
-}
-
-.delete-btn {
-    background: transparent;
-    border: none;
-    color: #e63946;
-    font-weight: bold;
-    cursor: pointer;
-}
-.delete-btn:hover {
-    color: #ff4d5a;
-}
-
-
-
+/* ================================
+   ERRORES / ALERTAS
+================================ */
 .input-error {
-    border: 2px solid #e63946 !important;
-    color: #e63946 !important;
-}
-.input-error::placeholder {
-    color: #ff6b6b !important;
+    background: #ffe6e6 !important;
+    border: 2px solid #ff6b6b !important;
+    color: #b30000 !important;
 }
 
-.label-error {
-    color: #e63946 !important;
-    font-weight: bold;
+.input-error::placeholder {
+    color: #ff7a7a !important;
 }
 
 .error-msg {
-    color: #e63946;
-    margin-top: 5px;
-    font-size: 0.85rem;
+    color: #b30000;
+    font-size: 0.8rem;
+    margin-top: 3px;
     display: none;
 }
 
 
 
-.alert-box,
-.success-box,
-.clear-box,
-#deletedBox {
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    display: none;
-    text-align: center;
-}
-
-.alert-box, #deletedBox {
-    background: #8b0000;
-    color: white;
-}
-
-.success-box {
-    background: #006400;
-    color: white;
-}
-
-.clear-box {
-    background: #1a1a1a;
-    color: #eaeaea;
-}
-
-
-
+/* ================================
+   PROGRESS BAR
+================================ */
 .progress-container {
     width: 100%;
     background: #222;
@@ -267,19 +272,23 @@ body {
 
 
 
-.input-error {
-    background: #ffe6e6 !important;
-    border: 2px solid #ff6b6b !important;
-    color: #b30000 !important;
+/* ================================
+   LISTAS
+================================ */
+.list-group-item {
+    background: #121212 !important;
+    color: white;
+    border: 1px solid #2a2a2a;
 }
 
-.input-error::placeholder {
-    color: #ff7a7a !important;
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #e63946;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.error-msg {
-    color: #b30000;
-    font-size: 0.8rem;
-    margin-top: 3px;
-    display: none;
+.delete-btn:hover {
+    color: #ff4d5a;
 }
