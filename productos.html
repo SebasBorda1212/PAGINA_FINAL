@@ -8,7 +8,7 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Fuente Premium tipo Amazon (Nunito) -->
+    <!-- Fuente Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- ESTILOS -->
@@ -19,25 +19,21 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg shadow-sm nav-dark">
     <div class="container-fluid">
-
         <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
             <img src="IMG/logo.png" width="40" height="40" class="me-2 rounded-circle" alt="logo">
             <span class="text-red">Imperial Motors</span>
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-
                 <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
                 <li class="nav-item"><a class="nav-link active text-red" href="productos.html">PRODUCTOS</a></li>
-                <li class="nav-item"><a class="nav-link" href="precios.html">PRECIOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="precios.html">PLANES</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-
             </ul>
         </div>
     </div>
@@ -60,7 +56,7 @@
                 <div class="card-body">
                     <h5 class="text-red fw-bold">Audi</h5>
                     <p class="text-white">Lujo, innovación y tecnología avanzada en cada detalle.</p>
-                    <button class="btn-red" onclick="window.open('https://www.audi.com', '_blank')">Ver más</button>
+                    <button class="btn-red" data-bs-toggle="modal" data-bs-target="#modalAudi">Ver más</button>
                 </div>
             </div>
         </div>
@@ -72,7 +68,7 @@
                 <div class="card-body">
                     <h5 class="text-red fw-bold">BMW</h5>
                     <p class="text-white">Conducción deportiva con ingeniería alemana de precisión.</p>
-                    <button class="btn-red" onclick="window.open('https://www.bmw.com', '_blank')">Ver más</button>
+                    <button class="btn-red" data-bs-toggle="modal" data-bs-target="#modalBMW">Ver más</button>
                 </div>
             </div>
         </div>
@@ -84,12 +80,230 @@
                 <div class="card-body">
                     <h5 class="text-red fw-bold">Mazda</h5>
                     <p class="text-white">Diseño emocional y conducción dinámica y eficiente.</p>
-                    <button class="btn-red" onclick="window.open('https://www.mazda.com', '_blank')">Ver más</button>
+                    <button class="btn-red" data-bs-toggle="modal" data-bs-target="#modalMazda">Ver más</button>
                 </div>
             </div>
         </div>
 
+        <!-- FERRARI -->
+        <div class="col-md-4 mb-4">
+            <div class="card-dark text-center">
+                <img src="IMG/tar4.jpg" class="card-img-top rounded-circle img-brand" alt="Mazda">
+                <div class="card-body">
+                    <h5 class="text-red fw-bold">Ferrari</h5>
+                    <p class="text-white">Marca italiana de autos deportivos famosa por su velocidad, lujo y diseño icónico.</p>
+                    <button class="btn-red" data-bs-toggle="modal" data-bs-target="#modalFerrari">Ver más</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- ========== MODALES DE MODELOS ========== -->
+
+<!-- === AUDI === -->
+<div class="modal fade" id="modalAudi" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark2 text-white p-3 rounded-4">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-red fw-bold">Modelos Audi</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body d-flex flex-column gap-4">
+
+        <!-- A3 -->
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/audi1.jpg" class="rounded shadow" width="120">
+            <div>
+                <a href="https://www.audi.com.co/a3/a3-sportback/fascinacion" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Audi A3 Sportback
+                </a>
+                <p class="text-secondary mb-1">Compacto, elegante y eficiente.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Audi A3 Sportback">Alquilar</button>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/audi2.jpg" class="rounded shadow" width="120">
+            <div>
+                <a href="https://audicolwagen.com.co/q5/" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Audi Q5 TFSI Quattro
+                </a>
+                <p class="text-secondary mb-1">SUV premium con tracción total.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Audi Q5 TFSI">Alquilar</button>
+            </div>
+        </div>
+
+        <!-- RS7 -->
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/audi3.jpg" class="rounded shadow" width="120">
+            <div>
+                <a href="https://www.audi.es/es/modelos/a7/rs-7-sportback-performance/" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Audi RS7 Performance
+                </a>
+                <p class="text-secondary mb-1">Máxima potencia y lujo deportivo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Audi RS7 Performance">Alquilar</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- === BMW === -->
+<div class="modal fade" id="modalBMW" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark2 text-white p-3 rounded-4">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-red fw-bold">Modelos BMW</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body d-flex flex-column gap-4">
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/bmw1.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.bmw.com.co/modelos/serie-3" target="_blank" class="fw-bold text-red text-decoration-none">
+                    BMW Serie 3
+                </a>
+                <p class="text-secondary mb-1">Sedán premium deportivo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="BMW Serie 3">Alquilar</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/bmw2.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.bmw.com.co/bmw-x5-m-competition-2025" target="_blank" class="fw-bold text-red text-decoration-none">
+                    BMW X5 M Competition
+                </a>
+                <p class="text-secondary mb-1">SUV de alto rendimiento y lujo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="BMW X5 M">Alquilar</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/bmw3.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.bmw.com/es/innovation/bmw-i8-un-clasico-del-futuro.html" target="_blank" class="fw-bold text-red text-decoration-none">
+                    BMW i8 Roadster
+                </a>
+                <p class="text-secondary mb-1">Híbrido futurista y exclusivo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="BMW i8 Roadster">Alquilar</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- === MAZDA === -->
+<div class="modal fade" id="modalMazda" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark2 text-white p-3 rounded-4">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-red fw-bold">Modelos Mazda</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body d-flex flex-column gap-4">
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/mazda1.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.mazda.com.co/vehiculos/mazda-3-sedan-nueva-generacion/" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Mazda 3 Touring
+                </a>
+                <p class="text-secondary mb-1">Sedán con estilo deportivo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Mazda 3 Touring">Alquilar</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/mazda2.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.mazda.com.co/vehiculos/mazda-cx-30/" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Mazda CX-30 Grand Touring
+                </a>
+                <p class="text-secondary mb-1">SUV moderno y eficiente.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Mazda CX-30 Grand Touring">Alquilar</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/mazda3.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.mazdaespanol.com/veh%C3%ADculos-fsk/mx-5-miata" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Mazda MX-5 Miata
+                </a>
+                <p class="text-secondary mb-1">Icónico convertible deportivo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Mazda MX-5 Miata">Alquilar</button>
+            </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- === FERRARI === -->
+<div class="modal fade" id="modalFerrari" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark2 text-white p-3 rounded-4">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-red fw-bold">Modelos Mazda</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body d-flex flex-column gap-4">
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/ferr1.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.ferrari.com/es-ES/auto/ferrari-488-gtb" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Ferrari 488 GTB
+                </a>
+                <p class="text-secondary mb-1">Deportivo V8 biturbo con gran equilibrio entre potencia y control.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Mazda 3 Touring">Alquilar</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/ferr2.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.ferrari.com/es-ES/auto/f8-tributo" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Ferrari F8 Tributo
+                </a>
+                <p class="text-secondary mb-1">Evolución del 488, más ligero y potente, enfocado en rendimiento extremo.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Mazda CX-30 Grand Touring">Alquilar</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+            <img src="IMG/ferr3.jpg" width="120" class="rounded shadow">
+            <div>
+                <a href="https://www.ferrari.com/es-ES/auto/sf90-stradale" target="_blank" class="fw-bold text-red text-decoration-none">
+                    Ferrari SF90 Stradale
+                </a>
+                <p class="text-secondary mb-1">Ferrari híbrido más potente, combina motor V8 y eléctricos para máxima velocidad.</p>
+                <button class="btn-red btn-alquilar" data-modelo="Mazda MX-5 Miata">Alquilar</button>
+            </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -98,9 +312,8 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="productos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="productos.js"></script>
 
 </body>
 </html>
-

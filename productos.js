@@ -1,23 +1,24 @@
-const modal = document.getElementById("customModal");
-const overlay = document.getElementById("overlay");
+// Verificar sesión y manejar botón ALQUILAR
+document.addEventListener("DOMContentLoaded", () => {
 
-function openModal(title, message) {
-    if (!modal || !overlay) return;
-    modal.classList.add("show");
-    overlay.classList.add("show");
+    const botones = document.querySelectorAll(".btn-alquilar");
 
-    document.querySelector(".modal-header-custom h3").textContent = title;
-    document.querySelector(".modal-text").textContent = message;
-}
+    botones.forEach(btn => {
+        btn.addEventListener("click", () => {
 
-document.getElementById("btnAudi")?.addEventListener("click", () =>
-    openModal("Audi", "Lujo, innovación y tecnología avanzada en cada detalle.")
-);
+            const usuario = JSON.parse(localStorage.getItem("usuario_activo"));
+            const modelo = btn.getAttribute("data-modelo");
 
-document.getElementById("btnBMW")?.addEventListener("click", () =>
-    openModal("BMW", "Conducción deportiva con ingeniería alemana de precisión.")
-);
+            // Si NO está logeado
+            if (!usuario) {
+                alert("Debes iniciar sesión para poder alquilar un vehículo.");
+                document.getElementById("btnLogin")?.click(); 
+                return;
+            }
 
-document.getElementById("btnMazda")?.addEventListener("click", () =>
-    openModal("Mazda", "Diseño emocional y conducción dinámica y eficiente.")
-);
+            // Si está logeado → mensaje
+            alert(`Perfecto ${usuario.nombres}, un asesor se comunicará contigo sobre el modelo ${modelo}.`);
+        });
+    });
+
+});
